@@ -1,0 +1,20 @@
+﻿@model WebApplication2.Models.ViewModels.LogInModel
+    @{
+        Layout = "~/Views/Shared/_Layout.cshtml";
+    }
+    @section header{
+        <title>ورود</title>
+    }
+
+    <h2>ورود</h2>
+    <h2>Log In</h2>
+
+    @Html.ValidationSummary(true)
+
+    @using (Html.BeginForm())
+    {
+        @Html.EditorForModel()
+        <p>
+            <button type="submit">ورود</button>
+        </p>
+    }
